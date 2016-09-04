@@ -21,8 +21,22 @@
   <!-- used in various places to indicate there is one song for a given artist or album -->
   <string name="onesong">1 τραγούδι</string>
   <!-- used in various places to indicate there is some number other than one songs for a given artist or album. -->
+  <plurals name="Nsongs">
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> τραγούδια</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> τραγούδια</item>
+  </plurals>
   <!-- shows how many songs on the album are by the selected artist, out of how many total, if those two numbers are different -->
+  <plurals name="Nsongscomp">
+    <item quantity="one"><xliff:g id="count_for_artist">%2$d</xliff:g> of <xliff:g id="total_count">%1$d</xliff:g> Κομμάτια</item>
+    <item quantity="other"><xliff:g id="count_for_artist">%2$d</xliff:g> of <xliff:g id="total_count">%1$d</xliff:g> Κομμάτια</item>
+  </plurals>
   <!-- Used in artists list view, indicates how many albums exist for a given artist. -->
+  <plurals name="Nalbums">
+    <!-- number of albums is one -->
+    <item quantity="one">1 άλμπουμ</item>
+    <!-- number of albums is not equal to one -->
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> άλμπουμ</item>
+  </plurals>
   <!--
     This string is used as the format string in a String.format call,
     and 5 additional arguments are available for printing:
@@ -41,14 +55,18 @@
   <!-- Menu item that switches the music player out of party shuffle mode -->
   <string name="party_shuffle_off">Απενεργοποίηση λειτουργίας \"πάρτι - τυχαία αναπαραγωγή\"</string>
   <!-- Menu item that clear all playlists mode -->
+  <string name="clear_all_playlists">Καταργήστε όλες τις λίστες αναπαραγωγής</string>
   <!-- Menu item that deletes the currently selected item, which might be a single song, or a collection of songs.
          The user will be prompted to confirm before deletion actually takes place -->
   <string name="delete_item">Διαγραφή</string>
   <!-- Menu item to play back all the songs in the currently showing list in list order -->
   <string name="play_all">Αναπαραγωγή όλων</string>
   <!-- Menu item to play song in music -->
+  <string name="open_in_music">Ανοιχτό στη μουσική</string>
   <!-- Menu item to share audio or video -->
+  <string name="share">Κοινή Χρήση</string>
   <!-- Menu item to details audio or video -->
+  <string name="details">Λεπτομέρειες</string>
   <!-- Delete confirmation dialog when deleting an entire artist -->
   <string name="delete_artist_desc">Οριστική διαγραφή όλων των τραγουδιών του <xliff:g id="ARTIST">%s</xliff:g> από την κάρτα SD;</string>
   <!-- Delete confirmation dialog when deleting an entire album -->
@@ -56,11 +74,31 @@
   <!-- Delete confirmation dialog when deleting a single song -->
   <string name="delete_song_desc">Οριστική διαγραφή του \"<xliff:g id="SONG">%s</xliff:g>\" από την κάρτα SD;</string>
   <!-- Delete confirmation dialog, confirmation button text -->
+  <string name="delete_confirm_button_text">ΟΚ</string>
   <!-- Toast confirming that song(s) was/were deleted. -->
+  <plurals name="NNNtracksdeleted">
+    <!-- delete confirmation message for 1 song -->
+    <item quantity="one">1 τραγούδι διαγράφηκε.</item>
+    <!-- delete confirmation message for 0 or more than 1 songs -->
+    <item quantity="other"><xliff:g id="songs_to_delete">%d</xliff:g> τραγούδια διαγράφηκαν.</item>
+  </plurals>
   <!-- shown in dialog while the media scanner is starting up -->
   <string name="scanning">Σάρωση κάρτας SD...</string>
   <!-- shown in dialog while the media scanner is starting up -->
   <string name="scanning_nosdcard">Σάρωση αποθηκευτικού χώρου USB...</string>
+  <string-array name="title_array_folder">
+    <item>Καλλιτέχνες</item>
+    <item>Άλμπουμ</item>
+    <item>Τραγούδια</item>
+    <item>Φάκελοι</item>
+    <item>Λίστες Αναπαραγωγής</item>
+  </string-array>
+  <string-array name="title_array_songs">
+    <item>Καλλιτέχνες</item>
+    <item>Άλμπουμ</item>
+    <item>Τραγούδια</item>
+    <item>Λίστες Αναπαραγωγής</item>
+  </string-array>
   <!-- title of the "current playlist" screen when not in party shuffle mode -->
   <string name="nowplaying_title">Αναπαραγωγή σε εξέλιξη</string>
   <!-- title of the "current playlist" screen when in party shuffle mode-->
@@ -76,7 +114,9 @@
   <!-- Songs screen title -->
   <string name="tracks_title">Τραγούδια</string>
   <!-- Category label on Library screen -->
+  <string name="folder_menu">Φάκελοι</string>
   <!-- Folder screen title -->
+  <string name="folders_title">Φάκελοι</string>
   <!-- Category label on Library screen -->
   <string name="playlists_menu">Playlist</string>
   <!-- Playlists screen title -->
@@ -102,19 +142,26 @@
   <!-- Playlist context menu item to rename the selected playlist-->
   <string name="rename_playlist_menu">Μετονομασία</string>
   <!-- Dialog box message shown when clearing all playlists-->
+  <string name="clear_all_playlists_message">Θέλετε να καταργήσετε όλες τις λίστες αναπαραγωγής;</string>
   <!-- Dialog box message shown when deleting a playlist-->
+  <string name="delete_playlist_message">Θέλετε να διαγράψετε το «<xliff:g id="name">%s </xliff:g>»;</string>
   <!-- Dialog box button -->
+  <string name="delete_playlist_button_ok">ΟΚ</string>
+  <string name="delete_playlist_button_cancel">Ακύρωση</string>
   <!-- Transient popup message shown after deleting a playlist -->
-  <string name="playlist_deleted_message">Το playlist διαγράφηκε.</string>
+  <string name="playlist_deleted_message">Η λίστα αναπαραγωγής διαγράφηκε.</string>
   <!-- Transient popup message shown after renaming a playlist -->
-  <string name="playlist_renamed_message">Μετονομασία playlist.</string>
+  <string name="playlist_renamed_message">Μετονομασία λίστας αναπαραγωγής.</string>
   <!-- The name of the pseudo-playlist that holds all the recently added files, shown in list view -->
   <string name="recentlyadded">Αρχεία που προστέθηκαν πρόσφατα</string>
   <!-- The name of the pseudo-playlist that holds all the recently added files, shown in title bar of songs list -->
   <string name="recentlyadded_title">Αρχεία που προστέθηκαν πρόσφατα</string>
   <!-- The name of the pseudo-playlist that holds all the podcasts, shown in list view -->
+  <string name="podcasts_listitem">Podcasts</string>
   <!-- The name of the pseudo-playlist that holds all the podcasts, shown in title bar of songs list -->
+  <string name="podcasts_title">Podcasts</string>
   <!-- all recordings will show up in the media database in a playlist with thiis name -->
+  <string name="audio_db_playlist_name">Οι ηχογραφήσεις μου</string>
   <!-- Title of screen when no sd card is present -->
   <string name="sdcard_missing_title">Δεν υπάρχει κάρτα SD</string>
   <!-- Title of screen when no sd card is present -->
@@ -144,7 +191,9 @@
   <!-- Default name of album that doesn't have a name in the metadata -->
   <string name="unknown_album_name">Άγνωστο άλμπουμ</string>
   <!-- Default name of folder that doesn't have a path in the metadata -->
+  <string name="unknown_folder_name">Άγνωστη διαδρομή</string>
   <!-- Default name of folder that doesn't have a count in the metadata -->
+  <string name="unknown_folder_count">Άγνωστο πλήθος</string>
   <!-- Toast after turning shuffle on -->
   <string name="shuffle_on_notif">Η τυχαία αναπαραγωγή ενεργοποιήθηκε.</string>
   <!-- Toast after turning shuffle off -->
@@ -162,10 +211,19 @@
   <!-- Toast after setting a song as phone ringtone -->
   <string name="ringtone_set">Ορισμός του \"<xliff:g id="NAME">%s</xliff:g>\" ως ήχο κλήσης του τηλεφώνου.</string>
   <!-- Toast after setting a song as phone ringtone fail-->
+  <string name="ringtone_set_fail">"Αποτυχία ορισμού ήχου κλήσης."</string>
   <!-- Individual song context menu item -->
+  <string name="ringtone_menu_1">Χρήση ως ήχο κλήσης στη υποδοχή 1</string>
+  <string name="ringtone_menu_2">Χρήση ως ήχο κλήσης στη υποδοχή 2</string>
+  <string name="ringtone_menu_sim_name_1">Χρήση ως υποδοχή 1 «<xliff:g id="NAME">%s </xliff:g>» ringtone</string>
+  <string name="ringtone_menu_sim_name_2">Χρήση ως υποδοχή 2 «<xliff:g id="NAME">%s </xliff:g>» ήχο κλήσης</string>
   <!-- Menu item -->
+  <string name="ringtone_menu_short_1">Χρησιμοποιήσετε ως ήχο κλήσης 1</string>
+  <string name="ringtone_menu_short_2">Χρησιμοποιήσετε ως ήχο κλήσης 2</string>
   <!-- Toast after setting a song as phone ringtone -->
+  <string name="ringtone_set_1">Ορισμός του \"<xliff:g id="Name">%s</xliff:g>\" ως ήχο κλήσης του τηλεφώνου στη θέση 1.</string>
   <!-- Toast after setting a song as phone ringtone -->
+  <string name="ringtone_set_2">Ορισμός του \"<xliff:g id="Name">%s</xliff:g>\" ως ήχο κλήσης του τηλεφώνου στη θέση 2.</string>
   <!-- Context menu item -->
   <string name="play_selection">Αναπαραγωγή</string>
   <!-- Context menu item -->
@@ -177,6 +235,12 @@
   <!-- Template for newly created playlist name -->
   <string name="new_playlist_name_template">Νέο playlist <xliff:g id="NUMBER">%d</xliff:g></string>
   <!-- Toasts after adding song(s) to playlists -->
+  <plurals name="NNNtrackstoplaylist">
+    <!-- message shown when one song was added -->
+    <item quantity="one">1 τραγούδι προστέθηκε στη λίστα αναπαραγωγής.</item>
+    <!-- message shown when zero or more than one song was added -->
+    <item quantity="other"><xliff:g id="number" example="27">%d</xliff:g> τραγούδια προστέθηκαν στη λίστα αναπαραγωγής.</item>
+  </plurals>
   <!-- Toast after selecting an empty playlist -->
   <string name="emptyplaylist">Το playlist που επιλέξατε είναι κενό.</string>
   <!-- Button name when saving a playlist -->
@@ -188,6 +252,7 @@
   <!-- Dialog box message -->
   <string name="service_start_error_msg">Δεν ήταν δυνατή η αναπαραγωγή του τραγουδιού.</string>
   <!-- Dialog box button -->
+  <string name="service_start_error_button">ΟΚ</string>
   <!-- Time span edit options that appear when editing system playlist "Recently added" -->
   <!-- Used to indicate the number of weeks the "recently added" playlist covers in a selector widget -->
   <string-array name="weeklist">
@@ -227,6 +292,7 @@
   <!-- Shown as a transient message whenever a file fails to play -->
   <string name="playback_failed">Λυπούμαστε, το πρόγραμμα αναπαραγωγής δεν υποστηρίζει αυτόν τον τύπο αρχείου ήχου.</string>
   <!-- Shown as a transient message whenever a file fails to open -->
+  <string name="open_failed">Συγνώμη, δεν μπορεί να ανοίξει το αρχείο.</string>
   <!-- Text for the "cancel" button in the "delete" and "create playlist" confirmation dialogs -->
   <string name="cancel">Ακύρωση</string>
   <!-- context menu item to remove the selected item from the playlist -->
@@ -242,6 +308,7 @@
   <!-- Shown in the title bar while the list of songs is being retrieved in the background -->
   <string name="working_songs">Τραγούδια...</string>
   <!-- Shown in the title bar while the list of folders is being retrieved in the background -->
+  <string name="working_folders">Φακέλοι\u2026</string>
   <!-- Shown in the title bar while the list of playlists is being retrieved in the background -->
   <string name="working_playlists">Playlist…</string>
   <!-- Shown in the music picker while loading the music database. -->
@@ -258,20 +325,78 @@
   <string name="search_settings_description">Καλλιτέχνες, άλμπουμ και τραγούδια</string>
   <!-- Shown in the search box as a hint -->
   <string name="search_hint">Αναζήτηση μουσικής</string>
+  <string name="search_hint_video">Αναζήτηση βίντεο</string>
   <!--The fast scroll thumb will show one character from this string depending on the position in the list -->
   <string name="fast_scroll_alphabet"> ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
   <!-- Text shown on widget when first loaded -->
   <string name="widget_initial_text">Αγγίξτε για να επιλέξετε μουσική.</string>
   <!-- Menu text for the item controlling the audio effects panel [CHAR LIMIT=15] -->
   <string name="effectspanel">Ηχητικά εφέ</string>
+  <string name="duplicate_playlist_name_alert">Υπάρχει ήδη μια λίστα αναπαραγωγής, που ονομάζεται «<xliff:g id="name">%s </xliff:g>». Παρακαλούμε επιλέξτε ένα διαφορετικό όνομα.</string>
+  <string name="same_playlist_name_alert">Δεν έχει αλλάξει το όνομα «<xliff:g id="name">%s </xliff:g>» της λίστας αναπαραγωγής. Παρακαλούμε επιλέξτε ένα διαφορετικό όνομα.</string>
+  <string name="button_ok">ΟΚ</string>
+  <string name="list_empty">Δεν υπάρχει μουσική στη λίστα αναπαραγωγής.</string>
   <!-- Shown when video is played after disable Gallery app from Settings -->
+  <string name="enable_gallery_app">Το βίντεο δεν μπορεί να παίξει, παρακαλούμε ενεργοποιήστε την εφαμογή Συλλογή απο τις ρυθμίσεις.</string>
+  <string name="close_music">"Τέλος"</string>
+  <string name="delete_video_item_message">Θέλετε να διαγράψετε το «<xliff:g id="name">%s </xliff:g>»;</string>
+  <string name="video_deleted_message">Το βίντεο διαγράφηκε.</string>
   <!-- Menu item that takes the user link to net to see more music -->
+  <string name="more_music">Περισσότερη μουσική</string>
   <!-- Menu item that takes the user link to net to see more video -->
+  <string name="more_video">Περισσότερα βίντεο</string>
   <!--gesture control playback status-->
+  <string name="music_gesture_play">"Αναπαραγωγή/παύση ήχου"</string>
+  <string name="music_gesture_prev">"Αναπαραγωγή προηγούμενου κομματιού"</string>
+  <string name="music_gesture_next">"Παίξε το επόμενο κομμάτι"</string>
   <!-- DRM Related Strings -->
+  <string name="no_permission_for_drm">"Λυπούμαστε, δεν μπορεί να μοιραστεί το αρχείο Drm"</string>
+  <string name="drm_license_info">Πληροφορίες άδειας χρήσης Drm</string>
+  <string name="drm_ringtone_error">Δεν είναι δυνατό να ορίσετε CD/SD αρχεία ως ήχο κλήσης</string>
+  <string name="drm_right_expired">Τα δικαιώματα DRM έχουν λήξει</string>
+  <string name="action_consumes_rights">Τα δικαιώματα θα καταναλωθούν για την αναπαραγωγή αυτού του μέσου.</string>
+  <string name="rights_expired">Τα δικαιώματα θα λήξουν για αυτό το τραγούδι.</string>
+  <string name="ring_tone_size_exceed">Το μέγεθος ήχου κλήσης Drm δεν μπορεί να υπερβεί τα 300kb.</string>
+  <string name="cant_set_ringtone_with_count_perm">Δεν μπορεί να οριστεί το αρχείο Drm με άδεια πλήθους.</string>
+  <string name="navigation_drawer_title">"Μουσική"</string>
+  <string name="action_settings">Ρυθμίσεις</string>
+  <string name="equalizer_button_text">Ισοσταθμιστής</string>
+  <string name="exit_button_text">Έξοδος</string>
+  <string name="action_settings1">Ρυθμίσεις1</string>
+  <string name="action_settings2">Ρυθμίσεις2</string>
+  <string name="action_one">Ένα</string>
+  <string name="action_two">Δύο</string>
+  <string name="action_three">Τρία</string>
   <string name="shuffle_all">Τυχ.αναπαρ.όλων</string>
+  <string name="no_music_found">Δεν βρέθηκε μουσική</string>
   <!--  Adding new string here for file delete error message -->
+  <string name="song_deleted_error_message">Δεν μπόρεσε να παιχτεί η μουσική που ζητήσατε</string>
+  <string name="song_title">Όνομα Κομματιού:</string>
+  <string name="album_title">Όνομα Άλμπουμ:</string>
+  <string name="artist_title">Όνομα Καλλιτέχνη:</string>
+  <string name="duration_title">Διάρκεια:</string>
+  <string name="path_title">Διαδρομή:</string>
+  <string name="size_title">Μέγεθος:</string>
+  <string name="duration_unit">" Λεπτά"</string>
   <!-- Human readable sizes -->
+  <string name="size_bytes">Β</string>
+  <string name="size_kilobytes">kB</string>
+  <string name="size_megabytes">MB</string>
+  <string name="size_gigabytes">GB</string>
+  <string name="favorite">Αγαπημένα</string>
+  <string name="no_favorite">Δεν υπάρχουν αγαπημένα</string>
+  <string name="favorite_playlist">Τα Αγαπημένα μου</string>
+  <string name="can_not_create_my_favorite">Δεν μπορείτε να δημιουργήσετε ή καταπατήσετε την λίστα αναπαραγωγής \"Τα Αγαπημένα μου\"</string>
   <!-- add by filemanager -->
+  <string name="add_by_filemanager">Προσθήκη από Διαχ. Αρχείων</string>
+  <string name="add_file_failed">Δεν είναι δυνατή η προσθήκη αυτού του αρχείου η μορφή δεν υποστηρίζεται ή δεν υπάρχει στη βιβλιοθήκη πολυμέσων</string>
   <!-- permission request -->
+  <string name="dialog_title_help">Βοήθεια</string>
+  <string name="dialog_content">Αυτή η εφαρμογή δεν μπορεί να λειτουργήσει χωρίς τα απαιτούμενα δικαιώματα. Παρακαλούμε παραχωρήστε τα δικαιώματα στις ρυθμίσεις.</string>
+  <string name="dialog_button_quit">Κλείσιμο</string>
+  <string name="dialog_button_settings">Ρυθμίσεις</string>
+  <string name="audio_preview_fail_security">Απέτυχε να ανοίξει αρχείο με θέματα ασφάλειας.</string>
+  <string name="audio_preview_fail_io">Δεν είναι δυνατό το άνοιγμα του αρχείου</string>
+  <string name="audio_preview_fail_illegal_state">Παράνομη κρατική, απέτυχε να ανοίξει αρχείο.</string>
+  <string name="audio_preview_fail_illegal_argument">Παράνομο επιχείρημα, απέτυχε να ανοίξει αρχείο.</string>
 </resources>
